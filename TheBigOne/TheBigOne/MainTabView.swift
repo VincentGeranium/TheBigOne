@@ -20,7 +20,7 @@ struct MainTabView: View {
                     Label("Shop", systemImage: "building")
                 }
             
-            LocationMapView()
+            ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
