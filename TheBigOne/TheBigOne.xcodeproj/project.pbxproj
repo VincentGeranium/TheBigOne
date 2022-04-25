@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFD7AAAD28161F0900DE0505 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD7AAAC28161F0900DE0505 /* LocationDetailView.swift */; };
 		BFF39A9F28140E0B000EC09B /* TheBigOneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF39A9E28140E0B000EC09B /* TheBigOneApp.swift */; };
 		BFF39AA328140E0E000EC09B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF39AA228140E0E000EC09B /* Assets.xcassets */; };
 		BFF39AA628140E0E000EC09B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF39AA528140E0E000EC09B /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BFD7AAAC28161F0900DE0505 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		BFF39A9B28140E0B000EC09B /* TheBigOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBigOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF39A9E28140E0B000EC09B /* TheBigOneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBigOneApp.swift; sourceTree = "<group>"; };
 		BFF39AA228140E0E000EC09B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				BFF39AB4281410AC000EC09B /* ProfileView.swift */,
 				BFF39AB62814123D000EC09B /* Color+.swift */,
 				BFF39AB828141366000EC09B /* MainTabView.swift */,
+				BFD7AAAC28161F0900DE0505 /* LocationDetailView.swift */,
 			);
 			path = TheBigOne;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				BFF39AB72814123D000EC09B /* Color+.swift in Sources */,
 				BFF39AB128141077000EC09B /* LocationMapView.swift in Sources */,
 				BFF39AB5281410AC000EC09B /* ProfileView.swift in Sources */,
+				BFD7AAAD28161F0900DE0505 /* LocationDetailView.swift in Sources */,
 				BFF39AB928141366000EC09B /* MainTabView.swift in Sources */,
 				BFF39A9F28140E0B000EC09B /* TheBigOneApp.swift in Sources */,
 				BFF39AB328141096000EC09B /* LocationShopListView.swift in Sources */,
