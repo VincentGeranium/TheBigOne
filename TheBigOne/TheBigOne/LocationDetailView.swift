@@ -13,60 +13,62 @@ struct LocationDetailView: View {
                    GridItem(.flexible())]
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 16) {
-                Image("default-shop-banner")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 120)
-                
-                HStack {
-                    Label("1 5 Markert St Ste 40", systemImage: "mappin.and.ellipse")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                    Spacer()
-                }
+        
+        VStack(spacing: 16) {
+            Image("default-shop-banner")
+                .resizable()
+                .scaledToFill()
+                .frame(height: 120)
+            
+            HStack {
+                Label("1 5 Markert St Ste 40", systemImage: "mappin.and.ellipse")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
+            .padding(.horizontal)
+            
+            Text("This is test description. This is test description. This is test description. This is test description. This is test description. This is test description.")
+                .lineLimit(3)
+                .minimumScaleFactor(0.75)
                 .padding(.horizontal)
-                
-                Text("This is test description. This is test description. This is test description. This is test description. This is test description. This is test description.")
-                    .lineLimit(3)
-                    .minimumScaleFactor(0.75)
-                    .padding(.horizontal)
-                
-                ZStack {
-                    Capsule()
-                        .frame(height: 80)
-                        .foregroundColor(Color(UIColor.secondarySystemBackground))
-                    HStack(spacing: 20) {
-                        Button {
-                            
-                        } label: {
-                            LocationActionButton(color: Color(UIColor.systemBlue), imageName: "location.fill")
-                        }
+                .frame(height: 70)
+            
+            ZStack {
+                Capsule()
+                    .frame(height: 80)
+                    .foregroundColor(Color(UIColor.secondarySystemBackground))
+                HStack(spacing: 20) {
+                    Button {
                         
-                        Link(destination: URL(string: "https://www.apple.com")!) {
-                            LocationActionButton(color: Color(UIColor.systemBlue), imageName: "network")
-                        }
+                    } label: {
+                        LocationActionButton(color: Color(UIColor.systemBlue), imageName: "location.fill")
+                    }
+                    
+                    Link(destination: URL(string: "https://www.apple.com")!) {
+                        LocationActionButton(color: Color(UIColor.systemBlue), imageName: "network")
+                    }
+                    
+                    Button {
                         
-                        Button {
-                            
-                        } label: {
-                            LocationActionButton(color: Color(UIColor.systemBlue), imageName: "phone.fill")
-                        }
+                    } label: {
+                        LocationActionButton(color: Color(UIColor.systemBlue), imageName: "phone.fill")
+                    }
+                    
+                    Button {
                         
-                        Button {
-                            
-                        } label: {
-                            LocationActionButton(color: Color(UIColor.systemBlue), imageName: "person.fill.checkmark")
-                        }
+                    } label: {
+                        LocationActionButton(color: Color(UIColor.systemBlue), imageName: "person.fill.checkmark")
                     }
                 }
-                .padding(.horizontal)
-                
-                Text("Who's Here?")
-                    .fontWeight(.bold)
-                    .font(.title2)
-                
+            }
+            .padding(.horizontal)
+            
+            Text("Who's Here?")
+                .fontWeight(.bold)
+                .font(.title2)
+            
+            ScrollView {
                 LazyVGrid(columns: columns) {
                     FirstNameAvatar(firstName: "Jun")
                     FirstNameAvatar(firstName: "Jun")
@@ -78,18 +80,20 @@ struct LocationDetailView: View {
                     FirstNameAvatar(firstName: "Jun")
                     FirstNameAvatar(firstName: "Jun")
                 }
-                
-                Spacer()
             }
-            .navigationTitle("shop name")
-            .navigationBarTitleDisplayMode(.inline)
+            
+            Spacer()
         }
+        .navigationTitle("shop name")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationDetailView()
+        NavigationView {
+            LocationDetailView()
+        }
     }
 }
 
