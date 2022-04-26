@@ -54,7 +54,41 @@ struct ProfileView: View {
                 .padding()
             }
             
+            VStack(alignment: .leading) {
+                Text("Bio: ")
+                    .font(.callout)
+                    .foregroundColor(.secondary)
+                +
+                Text("\(100 - bio.count)")
+                    .font(.callout)
+                    .foregroundColor(bio.count <= 100 ? .blue : .red)
+                +
+                Text(" Charcter remain")
+                    .font(.callout)
+                    .foregroundColor(.secondary)
+                
+                TextEditor(text: $bio)
+                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1))
+                    .frame(height: 100)
+            }
+            .padding(.horizontal, 16)
+            
             Spacer()
+            
+//            var width = self.view.bounds.width / 3
+            
+            Button {
+                
+            } label: {
+                Text("Create Profile")
+                    .bold()
+                    .frame(width:280 ,height: 44)
+                    .background(Color(UIColor.systemBlue))
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+            }
+            .padding(.vertical)
+
         }
         .navigationTitle("Profile")
     }
