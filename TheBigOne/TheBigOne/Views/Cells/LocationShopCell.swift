@@ -1,46 +1,12 @@
 //
-//  LocationShopListView.swift
+//  LocationShopCell.swift
 //  TheBigOne
 //
-//  Created by Kwangjun Kim on 2022/04/23.
+//  Created by Kwangjun Kim on 2022/04/26.
 //
 
+import Foundation
 import SwiftUI
-
-struct LocationShopListView: View {
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(0..<10) { item in
-                    NavigationLink {
-                        LocationDetailView()
-                    } label: {
-                        LocationShopCell()
-                    }
-                }
-            }
-            .navigationTitle("Shop Spot")
-        }
-    }
-}
-
-struct LocationShopListView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocationShopListView()
-    }
-}
-
-struct AvatarView: View {
-    var size: CGFloat
-    
-    var body: some View {
-        Image("default-avatar")
-            .resizable()
-            .scaledToFit()
-            .frame(width: size, height: size)
-            .clipShape(Circle())
-    }
-}
 
 struct LocationShopCell: View {
     var body: some View {
@@ -69,5 +35,11 @@ struct LocationShopCell: View {
             }
             .padding(.leading)
         }
+    }
+}
+
+struct LocationShopCell_Priviews: PreviewProvider {
+    static var previews: some View {
+        LocationShopCell()
     }
 }

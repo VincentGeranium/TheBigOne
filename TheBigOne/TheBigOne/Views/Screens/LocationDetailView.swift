@@ -15,24 +15,15 @@ struct LocationDetailView: View {
     var body: some View {
         
         VStack(spacing: 16) {
-            Image("default-shop-banner")
-                .resizable()
-                .scaledToFill()
-                .frame(height: 120)
+            BannerImageView(image: "default-shop-banner")
             
             HStack {
-                Label("1 5 Markert St Ste 40", systemImage: "mappin.and.ellipse")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                AddressView(address: "1 5 Markert St Ste 40")
                 Spacer()
             }
             .padding(.horizontal)
             
-            Text("This is test description. This is test description. This is test description. This is test description. This is test description. This is test description.")
-                .lineLimit(3)
-                .minimumScaleFactor(0.75)
-                .padding(.horizontal)
-                .frame(height: 70)
+            DescriptionView(text: "This is test description. This is test description. This is test description. This is test description. This is test description. This is test description.")
             
             ZStack {
                 Capsule()
@@ -89,14 +80,6 @@ struct LocationDetailView: View {
     }
 }
 
-struct LocationDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            LocationDetailView()
-        }
-    }
-}
-
 struct LocationActionButton: View {
     var color: Color
     var imageName: String
@@ -125,6 +108,50 @@ struct FirstNameAvatar: View {
                 .bold()
                 .lineLimit(1)
                 .minimumScaleFactor(0.75)
+        }
+    }
+}
+
+struct BannerImageView: View {
+    
+    var image: String
+    
+    var body: some View {
+        Image(image)
+            .resizable()
+            .scaledToFill()
+            .frame(height: 120)
+    }
+}
+
+struct AddressView: View {
+    
+    var address: String
+    
+    var body: some View {
+        Label(address, systemImage: "mappin.and.ellipse")
+            .font(.caption)
+            .foregroundColor(.secondary)
+    }
+}
+
+struct DescriptionView: View {
+    
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .lineLimit(3)
+            .minimumScaleFactor(0.75)
+            .padding(.horizontal)
+            .frame(height: 70)
+    }
+}
+
+struct LocationDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            LocationDetailView()
         }
     }
 }

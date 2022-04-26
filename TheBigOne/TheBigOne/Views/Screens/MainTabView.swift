@@ -20,8 +20,10 @@ struct MainTabView: View {
                     Label("Shop", systemImage: "building")
                 }
             
-            ProfileView()
-                .tabItem {
+            NavigationView{
+                ProfileView()
+            }
+            .tabItem {
                     Label("Profile", systemImage: "person")
                 }
         }

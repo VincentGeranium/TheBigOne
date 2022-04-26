@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF6A66C828178CCD002D99A8 /* LocationShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A66C728178CCD002D99A8 /* LocationShopCell.swift */; };
+		BF6A66CA28178D61002D99A8 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A66C928178D61002D99A8 /* AvatarView.swift */; };
+		BF6A66CC28178EED002D99A8 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A66CB28178EED002D99A8 /* View+.swift */; };
+		BF6A66CE28178F8E002D99A8 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A66CD28178F8E002D99A8 /* CustomModifiers.swift */; };
+		BF6A66D0281790B1002D99A8 /* THOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A66CF281790B1002D99A8 /* THOButton.swift */; };
 		BFD7AAAD28161F0900DE0505 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD7AAAC28161F0900DE0505 /* LocationDetailView.swift */; };
 		BFF39A9F28140E0B000EC09B /* TheBigOneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF39A9E28140E0B000EC09B /* TheBigOneApp.swift */; };
 		BFF39AA328140E0E000EC09B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF39AA228140E0E000EC09B /* Assets.xcassets */; };
@@ -20,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF6A66C728178CCD002D99A8 /* LocationShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationShopCell.swift; sourceTree = "<group>"; };
+		BF6A66C928178D61002D99A8 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		BF6A66CB28178EED002D99A8 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		BF6A66CD28178F8E002D99A8 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		BF6A66CF281790B1002D99A8 /* THOButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THOButton.swift; sourceTree = "<group>"; };
 		BFD7AAAC28161F0900DE0505 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		BFF39A9B28140E0B000EC09B /* TheBigOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBigOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF39A9E28140E0B000EC09B /* TheBigOneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBigOneApp.swift; sourceTree = "<group>"; };
@@ -46,6 +56,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF6A66D128179351002D99A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFF39AB62814123D000EC09B /* Color+.swift */,
+				BF6A66CB28178EED002D99A8 /* View+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BF6A66D228179363002D99A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF6A66CD28178F8E002D99A8 /* CustomModifiers.swift */,
+				BF6A66D52817938F002D99A8 /* CustomViews */,
+				BF6A66D428179385002D99A8 /* Cells */,
+				BF6A66D328179369002D99A8 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF6A66D328179369002D99A8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BFF39AB028141077000EC09B /* LocationMapView.swift */,
+				BFF39AB228141096000EC09B /* LocationShopListView.swift */,
+				BFF39AB4281410AC000EC09B /* ProfileView.swift */,
+				BFF39AB828141366000EC09B /* MainTabView.swift */,
+				BFD7AAAC28161F0900DE0505 /* LocationDetailView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BF6A66D428179385002D99A8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BF6A66C728178CCD002D99A8 /* LocationShopCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BF6A66D52817938F002D99A8 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				BF6A66C928178D61002D99A8 /* AvatarView.swift */,
+				BF6A66CF281790B1002D99A8 /* THOButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		BFF39A9228140E0B000EC09B = {
 			isa = PBXGroup;
 			children = (
@@ -66,16 +125,12 @@
 		BFF39A9D28140E0B000EC09B /* TheBigOne */ = {
 			isa = PBXGroup;
 			children = (
+				BF6A66D228179363002D99A8 /* Views */,
+				BF6A66D128179351002D99A8 /* Extensions */,
 				BFF39AAC28140FF1000EC09B /* TheBigOne.entitlements */,
 				BFF39A9E28140E0B000EC09B /* TheBigOneApp.swift */,
 				BFF39AA228140E0E000EC09B /* Assets.xcassets */,
 				BFF39AA428140E0E000EC09B /* Preview Content */,
-				BFF39AB028141077000EC09B /* LocationMapView.swift */,
-				BFF39AB228141096000EC09B /* LocationShopListView.swift */,
-				BFF39AB4281410AC000EC09B /* ProfileView.swift */,
-				BFF39AB62814123D000EC09B /* Color+.swift */,
-				BFF39AB828141366000EC09B /* MainTabView.swift */,
-				BFD7AAAC28161F0900DE0505 /* LocationDetailView.swift */,
 			);
 			path = TheBigOne;
 			sourceTree = "<group>";
@@ -170,8 +225,13 @@
 				BFF39AB128141077000EC09B /* LocationMapView.swift in Sources */,
 				BFF39AB5281410AC000EC09B /* ProfileView.swift in Sources */,
 				BFD7AAAD28161F0900DE0505 /* LocationDetailView.swift in Sources */,
+				BF6A66C828178CCD002D99A8 /* LocationShopCell.swift in Sources */,
+				BF6A66D0281790B1002D99A8 /* THOButton.swift in Sources */,
 				BFF39AB928141366000EC09B /* MainTabView.swift in Sources */,
 				BFF39A9F28140E0B000EC09B /* TheBigOneApp.swift in Sources */,
+				BF6A66CA28178D61002D99A8 /* AvatarView.swift in Sources */,
+				BF6A66CC28178EED002D99A8 /* View+.swift in Sources */,
+				BF6A66CE28178F8E002D99A8 /* CustomModifiers.swift in Sources */,
 				BFF39AB328141096000EC09B /* LocationShopListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

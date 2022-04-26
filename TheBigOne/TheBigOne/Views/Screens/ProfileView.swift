@@ -16,33 +16,21 @@ struct ProfileView: View {
     var body: some View {
         VStack {
             ZStack {
-                Color(UIColor.secondarySystemBackground)
-                    .frame(height: 130)
-                    .cornerRadius(12)
-                    .padding(.horizontal)
+                NameBackgroundView()
                 
                 HStack(spacing: 20) {
                     ZStack {
                         AvatarView(size: 84)
-                        Image(systemName: "square.and.pencil")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 14, height: 14)
-                            .foregroundColor(.white)
-                            .offset(y: 30)
+                        EditImage()
                     }
                     .padding(.leading, 12)
                     
                     VStack(spacing: 1) {
                         TextField("First Name", text: $firstName)
-                            .font(.system(size: 32, weight: .bold))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.75)
+                            .profileNameStyle()
                         
                         TextField("Last Name", text: $lastName)
-                            .font(.system(size: 32, weight: .bold))
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.75)
+                            .profileNameStyle()
                         
                         TextField("Company Name", text: $companyName)
                             .lineLimit(1)
@@ -55,21 +43,10 @@ struct ProfileView: View {
             }
             
             VStack(alignment: .leading) {
-                Text("Bio: ")
-                    .font(.callout)
-                    .foregroundColor(.secondary)
-                +
-                Text("\(100 - bio.count)")
-                    .font(.callout)
-                    .foregroundColor(bio.count <= 100 ? .blue : .red)
-                +
-                Text(" Charcter remain")
-                    .font(.callout)
-                    .foregroundColor(.secondary)
+                CharacterRemainView(currentCount: bio.count)
                 
                 TextEditor(text: $bio)
-                    .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1))
-                    .frame(height: 100)
+                    .bioEditorStyle()
             }
             .padding(.horizontal, 16)
             
@@ -80,17 +57,50 @@ struct ProfileView: View {
             Button {
                 
             } label: {
-                Text("Create Profile")
-                    .bold()
-                    .frame(width:280 ,height: 44)
-                    .background(Color(UIColor.systemBlue))
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+                TBOButton(title: "Create Profile", backgroundColor: .theBigOneBlue)
             }
             .padding(.vertical)
 
         }
         .navigationTitle("Profile")
+    }
+}
+
+struct NameBackgroundView: View {
+    var body: some View {
+        Color(UIColor.secondarySystemBackground)
+            .frame(height: 130)
+            .cornerRadius(12)
+            .padding(.horizontal)
+    }
+}
+
+struct EditImage: View {
+    var body: some View {
+        Image(systemName: "square.and.pencil")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 14, height: 14)
+            .foregroundColor(.white)
+            .offset(y: 30)
+    }
+}
+
+struct CharacterRemainView: View {
+    var currentCount: Int
+    
+    var body: some View {
+        Text("Bio: ")
+            .font(.callout)
+            .foregroundColor(.secondary)
+        +
+        Text("\(100 - currentCount)")
+            .font(.callout)
+            .foregroundColor(currentCount <= 100 ? .blue : .red)
+        +
+        Text(" Charcter remain")
+            .font(.callout)
+            .foregroundColor(.secondary)
     }
 }
 
