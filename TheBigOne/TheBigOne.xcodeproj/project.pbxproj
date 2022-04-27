@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1F1CA62818D61B00812994 /* TBOLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1F1CA52818D61B00812994 /* TBOLocation.swift */; };
 		BF6A66C828178CCD002D99A8 /* LocationShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A66C728178CCD002D99A8 /* LocationShopCell.swift */; };
 		BF6A66CA28178D61002D99A8 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A66C928178D61002D99A8 /* AvatarView.swift */; };
 		BF6A66CC28178EED002D99A8 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6A66CB28178EED002D99A8 /* View+.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF1F1CA52818D61B00812994 /* TBOLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBOLocation.swift; sourceTree = "<group>"; };
 		BF6A66C728178CCD002D99A8 /* LocationShopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationShopCell.swift; sourceTree = "<group>"; };
 		BF6A66C928178D61002D99A8 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		BF6A66CB28178EED002D99A8 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF1F1CA42818D60700812994 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF1F1CA52818D61B00812994 /* TBOLocation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BF6A66D128179351002D99A8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		BFF39A9D28140E0B000EC09B /* TheBigOne */ = {
 			isa = PBXGroup;
 			children = (
+				BF1F1CA42818D60700812994 /* Model */,
 				BF6A66D228179363002D99A8 /* Views */,
 				BF6A66D128179351002D99A8 /* Extensions */,
 				BFF39AAC28140FF1000EC09B /* TheBigOne.entitlements */,
@@ -231,6 +242,7 @@
 				BFF39A9F28140E0B000EC09B /* TheBigOneApp.swift in Sources */,
 				BF6A66CA28178D61002D99A8 /* AvatarView.swift in Sources */,
 				BF6A66CC28178EED002D99A8 /* View+.swift in Sources */,
+				BF1F1CA62818D61B00812994 /* TBOLocation.swift in Sources */,
 				BF6A66CE28178F8E002D99A8 /* CustomModifiers.swift in Sources */,
 				BFF39AB328141096000EC09B /* LocationShopListView.swift in Sources */,
 			);
